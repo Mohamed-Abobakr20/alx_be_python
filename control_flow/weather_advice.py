@@ -2,7 +2,7 @@
 Create a Python script named weather_advice.py. This script will ask the user about the current weather conditions and provide clothing recommendations based on the input. This task aims to demonstrate the use of if, elif, and else statements to make decisions in a program
 """
 
-weather_state = input("What's the weather like today? (sunny/rainy/cold):")
+weather_state = input("What's the weather like today? (sunny/rainy/cold): ")
 wear_recommend = ""
 
 if weather_state == "sunny":
