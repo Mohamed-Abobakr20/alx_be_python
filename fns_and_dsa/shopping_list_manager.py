@@ -1,6 +1,18 @@
 """
 Create a Python script named shopping_list_manager.py that implements a simple interface for managing a shopping list. This task focuses on using lists to store and manipulate data dynamically.
 """
+def check_input(dataType):
+    match dataType:
+        case 'int':
+            item = int(input("Enter your number: "))
+            return item
+        case 'str':
+            item = input("Enter your string: ")
+            return item
+        case 'decimal':
+            item = float(input("Enter your number: "))
+            return item     
+            
 
 def display_menu():
     print("Shopping List Manager")
@@ -8,6 +20,7 @@ def display_menu():
     print("2. Remove Item")
     print("3. View List")
     print("4. Exit")
+
 
 def main():
     shopping_list = []
@@ -17,16 +30,15 @@ def main():
 
         if choice == '1':
             # Prompt for and add an item
-            item = input("Enter the item: ")
-            if type(item) != 'str':
-                item = int(item)
+            message = input("Choose the type you want to add (int - string - decimal)?: ")
+            item = check_input(message)
             shopping_list.append(item)
         elif choice == '2':
             # Prompt for and remove an item
-            item = input("Enter the item: ")
-            if type(item) != 'str':
-                item = int(item)
-            shopping_list.remove(item)
+            message = input("Choose the type you want to add (int - string - decimal)?: ")
+            item = check_input(message)
+            if item in shopping_list:
+                shopping_list.remove(item)
         elif choice == '3':
             # Display the shopping list
             print(shopping_list)
