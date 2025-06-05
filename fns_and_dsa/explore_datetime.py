@@ -17,5 +17,5 @@ def calculate_future_date():
     return future_date
 
 if __name__ == "__main__":
-    print(calculate_future_date())
+    print(f"Future date: {calculate_future_date()}")
    
