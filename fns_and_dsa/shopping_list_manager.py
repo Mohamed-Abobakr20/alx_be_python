@@ -4,13 +4,13 @@ Create a Python script named shopping_list_manager.py that implements a simple i
 def check_input(dataType):
     match dataType:
         case 'int':
-            item = int(input("Enter your number: "))
+            item = int(input("Enter the item to add: "))
             return item
         case 'str':
-            item = input("Enter your string: ")
+            item = input("Enter the item to add: ")
             return item
         case 'decimal':
-            item = float(input("Enter your number: "))
+            item = float(input("Enter the item to add: "))
             return item     
             
 
