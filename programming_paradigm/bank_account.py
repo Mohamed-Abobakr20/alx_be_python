@@ -2,7 +2,7 @@
 You will create two Python scripts: bank_account.py, which contains the BankAccount class, and main-0.py, which interfaces with the class through command line arguments to perform banking operations.
 """
 
-class BankAccount():
+class BankAccount:
     def __init__(self, account_balance = 0):
         self.account_balance = account_balance 
 
