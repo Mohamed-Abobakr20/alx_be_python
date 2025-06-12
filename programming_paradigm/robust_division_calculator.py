@@ -4,10 +4,16 @@ Create two Python scripts: robust_division_calculator.py, which contains the div
 
 def safe_divide(numerator, denominator):
     try:
-        if denominator == 0:
-            raise ZeroDivisionError
-        return float(numerator) / float(denominator)
+        # Attempt to convert inputs to float
+        num = float(numerator)
+        den = float(denominator)
+        
+        # Attempt division
+        result = num / den
+        return f"Result: {result}"
+    
     except ZeroDivisionError:
         return "Error: Cannot divide by zero."
+    
     except ValueError:
         return "Error: Please enter numeric values only."
