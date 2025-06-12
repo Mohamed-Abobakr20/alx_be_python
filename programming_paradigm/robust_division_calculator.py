@@ -1,0 +1,13 @@
+"""
+Create two Python scripts: robust_division_calculator.py, which contains the division logic including error handling, and main.py, which interfaces with the user through the command line.
+"""
+
+def safe_divide(numerator, denominator):
+    try:
+        if denominator == 0:
+            raise ZeroDivisionError
+        return float(numerator) / float(denominator)
+    except ZeroDivisionError:
+        return "Error: Cannot divide by zero."
+    except ValueError:
+        return "Error: Please enter numeric values only."
